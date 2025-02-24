@@ -1,0 +1,31 @@
+<div style="text-align: center;">
+    <h1>Angular Component</h1>
+    <button class="btn btn-primary" routerLink="/forms" routerLinkActive="router-link-active" ><i class="bi bi-plus-lg"></i>Create</button>
+    <router-outlet></router-outlet>
+  </div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Website</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of newArr">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.website}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editForm(item)"><i class="bi bi-pencil-square"></i>Edit</button>
+              <button class="btn btn-primary" (click)="deleteForm(item)"><i class="bi bi-trash2-fill"></i>Delete</button>
+            </td>
+          </tr>
+    </tbody>
+  </table>
+
+  

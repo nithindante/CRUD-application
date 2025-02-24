@@ -1,0 +1,46 @@
+<div><h2> New User</h2></div>
+
+<div class="submitForm">
+  <form (ngSubmit)="onSubmit(tempForm)" #tempForm="ngForm">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)]="employeeArr.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label>Website</label>
+      <input type="url" class="form-control"  placeholder="Enter Website" [(ngModel)]="employeeArr.website" name="website" required>
+    </div>
+  
+  
+      <div class="form-group">
+        <label>User Name</label>
+        <input type="text" class="form-control"  placeholder="Enter User Name" [(ngModel)]="employeeArr.username"name="username" required>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!tempForm.form.valid">Submit</button>
+    </form> 
+</div>
+
+<!-- 
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>id</label>
+    <input type="number" class="form-control"  placeholder="Enter id" [(ngModel)]="employeeArr.id">
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Enter Name" [(ngModel)]="employeeArr.name">
+  </div>
+  <div class="form-group">
+    <label>Website</label>
+    <input type="text" class="form-control"  placeholder="Enter Website" [(ngModel)]="employeeArr.website">
+  </div>
+
+
+    <div class="form-group">
+      <label>User Name</label>
+      <input type="text" class="form-control"  placeholder="Enter User Name" [(ngModel)]="employeeArr.username">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->

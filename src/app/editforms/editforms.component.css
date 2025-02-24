@@ -1,0 +1,20 @@
+.submitForm> div{
+
+    border: 1px solid;
+
+}
+
+.submitForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.form-group{
+    display: flex;
+}
+
+div{
+    text-align: center;
+}
